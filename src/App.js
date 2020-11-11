@@ -8,14 +8,9 @@ const App = () => {
 	const [ robots, setRobots ] = useState([]);
 	const [ searchField, setSearchField ] = useState('');
 
-	useEffect(
-		() => {
-			fetch('https://jsonplaceholder.typicode.com/users')
-				.then((res) => res.json())
-				.then((user) => setRobots(user));
-		},
-		[ robots ]
-	);
+	useEffect(() => {
+		fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json()).then((user) => setRobots(user));
+	}, []);
 
 	const onSearchChange = (event) => {
 		setSearchField(event.target.value);
