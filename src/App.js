@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<div className='tc'>
-			<h1>Robofriends</h1>
+			<h1> 🤖 Robofriends 🤖</h1>
 			<SearchBox searchChange={onSearchChange} />
 			<Scroll>
 				<CardList robots={filteredRobots} />

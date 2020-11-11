@@ -7,10 +7,17 @@ font-weight: normal;
 src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
 }
 
-h1 {
+.tc h1 {
   font-family: 'SEGA LOGO FONT';
-  font-size: 4rem;
+  font-size: 2rem;
   color: rgb(83, 202, 202);
   letter-spacing: 5px;
   font-weight: 200;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .tc h1 {
+    font-size: 4rem;
+  }
 }
