@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SearchBox from './components/SearchBox';
+import TagManager from 'react-gtm-module';
 import CardList from './components/CardList';
 import './App.css';
 import Scroll from './components/Scroll';
@@ -9,6 +10,11 @@ const App = () => {
 	const [ searchField, setSearchField ] = useState('');
 
 	useEffect(() => {
+		const tagManagerArgs = {
+			gtmId: 'GTM-TQBDBCC'
+		}
+		TagManager.initialize(tagManagerArgs);
+
 		fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json()).then((user) => setRobots(user));
 	}, []);
 
